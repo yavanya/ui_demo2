@@ -1,10 +1,10 @@
 library barber_screen;
 
-import 'package:barbers_demo/constant/ratings.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:sliver_tools/sliver_tools.dart';
 
+import '../../../constant/ratings.dart';
 import '../../../constant/colors.dart';
 import '../../../constant/text_styles.dart';
 import '../../../domain/model/barber.dart';
@@ -40,16 +40,8 @@ class BarberScreen extends StatelessWidget {
         slivers: [
           _TopWidget(barber: barber),
           SliverGap(39),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: EdgeInsets.only(left: 52),
-              child: Text(
-                'Отзывы',
-                style: Styles.h2,
-              ),
-            ),
-          ),
           _ReviewWidget(reviews: barber.reviews),
+          // TODO
           SliverToBoxAdapter(
             child: Container(
               width: double.infinity,
@@ -77,6 +69,7 @@ class BarberScreen extends StatelessWidget {
   }
 }
 
+//TODO move to src, check gaps and padding sizes
 class _TopWidget extends StatelessWidget {
   _TopWidget({@required this.barber, Key key})
       : super(
@@ -91,7 +84,6 @@ class _TopWidget extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.only(bottom: 20),
           width: double.infinity,
-          // height: 1400,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
@@ -106,6 +98,7 @@ class _TopWidget extends StatelessWidget {
         SliverGap(20),
         _SliderWidget(barber: barber),
         SliverGap(20),
+        //TODO add SliverToBoxAdapter to SmallInfoWidget
         SliverToBoxAdapter(child: SmallInfoWidget(barber: barber)),
         SliverGap(20),
         _OpenHours(
@@ -113,6 +106,7 @@ class _TopWidget extends StatelessWidget {
             openTime: barber.openTimeReal,
             closeTime: barber.closeTimeReal),
         SliverGap(20),
+        //TODO move
         SliverPadding(
           padding: EdgeInsets.only(left: 52),
           sliver: SliverToBoxAdapter(
@@ -125,6 +119,7 @@ class _TopWidget extends StatelessWidget {
         SliverGap(10),
         _BarberServices(services: barber.services),
         SliverGap(40),
+          //TODO move
         if (barber.team.isNotEmpty)
           SliverPadding(
             padding: EdgeInsets.only(left: 52),

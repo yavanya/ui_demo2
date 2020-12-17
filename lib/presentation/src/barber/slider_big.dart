@@ -1,5 +1,6 @@
 part of barber_screen;
 
+// as i did not have detailed info about the slider, i did like this:
 class _SliderWidget extends StatefulWidget {
   _SliderWidget({@required this.barber, Key key}) : super(key: key);
   final Barber barber;
@@ -23,7 +24,6 @@ class _SliderWidgetState extends State<_SliderWidget> {
       child: Stack(
         alignment: Alignment.topCenter,
         children: [
-          // as i did not have detailed info about the slider, i did like this:
           GestureDetector(
             onTap: () {
               setState(() {

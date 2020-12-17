@@ -39,6 +39,7 @@ class _TeamCard extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
+          //TODO check shadow
           BoxShadow(
             blurRadius: 18,
             color: Colors.black.withOpacity(0.12),

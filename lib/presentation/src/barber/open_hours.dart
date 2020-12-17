@@ -10,7 +10,7 @@ class _OpenHours extends StatefulWidget {
   final bool isOpen;
   final TimeOfDay openTime;
   final TimeOfDay closeTime;
-
+  //TODO move to const
   final TextStyle _style =
       TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: Colors.white);
 
@@ -44,6 +44,7 @@ class _OpenHoursState extends State<_OpenHours> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                //TODO change icon
                 Padding(
                   padding: const EdgeInsets.only(left: 10.0),
                   child: Icon(Icons.alarm, size: 14, color: Colors.white),
@@ -67,6 +68,7 @@ class _OpenHoursState extends State<_OpenHours> {
                 Spacer(),
                 Padding(
                   padding: const EdgeInsets.only(right: 5.0),
+                  //TODO change icon
                   child: Icon(
                     _isDropped ? Icons.arrow_drop_up : Icons.arrow_drop_down,
                     color: Colors.white,
