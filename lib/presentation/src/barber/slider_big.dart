@@ -19,7 +19,6 @@ class _SliderWidgetState extends State<_SliderWidget> {
 
   @override
   Widget build(BuildContext context) {
-    double _width = MediaQuery.of(context).size.width;
     return SliverToBoxAdapter(
       child: Stack(
         alignment: Alignment.topCenter,
@@ -34,16 +33,17 @@ class _SliderWidgetState extends State<_SliderWidget> {
                 }
               });
             },
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(25),
-              child: Container(
-                width: _width * 0.9,
-                height: _width * 0.5,
-                child: Image.asset(
-                  'assets/images/photos${widget.barber.images[_sliderIndex]}',
-                  fit: BoxFit.fitWidth,
+            child: Container(
+              width: double.infinity,
+              height: 222,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(24),
+                image: DecorationImage(
+                  image: AssetImage(
+                      'assets/images/photos${widget.barber.images[_sliderIndex]}'), fit: BoxFit.fitWidth
                 ),
               ),
+              margin: const EdgeInsets.only(left: 24, right: 24),
             ),
           ),
           Positioned(

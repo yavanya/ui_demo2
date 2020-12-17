@@ -1,5 +1,5 @@
 import 'package:barbers_demo/constant/colors.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class Styles {
   static const TextStyle h1 = TextStyle(
@@ -37,5 +37,11 @@ class Styles {
     fontWeight: FontWeight.w700,
     letterSpacing: 0.28,
     color: MyColors.mainColor,
+  );
+  static const TextStyle h5700white = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    letterSpacing: 0.24,
+    color: Colors.white,
   );
 }

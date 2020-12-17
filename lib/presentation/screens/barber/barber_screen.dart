@@ -11,6 +11,8 @@ import '../../../domain/model/barber.dart';
 import '../../src/common/custom_appbar.dart';
 import '../../src/common/small_info_widget.dart';
 
+part '../../src/barber/top_widget.dart';
+
 part '../../src/barber/slider_big.dart';
 
 part '../../src/barber/slider_small.dart';
@@ -41,97 +43,37 @@ class BarberScreen extends StatelessWidget {
           _TopWidget(barber: barber),
           SliverGap(39),
           _ReviewWidget(reviews: barber.reviews),
-          // TODO
-          SliverToBoxAdapter(
-            child: Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(32),
-                  color: MyColors.mainColor),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 18.0, horizontal: 90),
-                child: Text(
-                  'ЗАПИСАТЬСЯ',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w700,
-                      letterSpacing: 0.24),
-                ),
-              ),
-            ),
-          )
+          _AppointmentButton()
         ],
       ),
     );
   }
 }
 
-//TODO move to src, check gaps and padding sizes
-class _TopWidget extends StatelessWidget {
-  _TopWidget({@required this.barber, Key key})
-      : super(
-          key: key,
-        );
-  final Barber barber;
+class _AppointmentButton extends StatelessWidget {
+  const _AppointmentButton({
+    Key key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SliverStack(children: [
-      SliverPositioned.fill(
-        child: Container(
-          padding: const EdgeInsets.only(bottom: 20),
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(52),
-            ),
+    return SliverToBoxAdapter(
+      child: Container(
+        margin: EdgeInsets.only(top: 27.0, bottom: 28, left: 90, right: 90),
+        height: 52,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(32), color: MyColors.mainColor),
+        child: Center(
+          child: Text(
+            'ЗАПИСАТЬСЯ',
+            style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 0.32),
           ),
         ),
       ),
-      MultiSliver(children: [
-        SliverGap(20, color: Colors.white),
-        CustomAppBar(title: barber.name),
-        SliverGap(20),
-        _SliderWidget(barber: barber),
-        SliverGap(20),
-        //TODO add SliverToBoxAdapter to SmallInfoWidget
-        SliverToBoxAdapter(child: SmallInfoWidget(barber: barber)),
-        SliverGap(20),
-        _OpenHours(
-            isOpen: barber.isOpen,
-            openTime: barber.openTimeReal,
-            closeTime: barber.closeTimeReal),
-        SliverGap(20),
-        //TODO move
-        SliverPadding(
-          padding: EdgeInsets.only(left: 52),
-          sliver: SliverToBoxAdapter(
-            child: Text(
-              'Услуги',
-              style: Styles.h2,
-            ),
-          ),
-        ),
-        SliverGap(10),
-        _BarberServices(services: barber.services),
-        SliverGap(40),
-          //TODO move
-        if (barber.team.isNotEmpty)
-          SliverPadding(
-            padding: EdgeInsets.only(left: 52),
-            sliver: SliverToBoxAdapter(
-              child: Text(
-                'Команда',
-                style: Styles.h2,
-              ),
-            ),
-          ),
-        if (barber.team.isNotEmpty) _TeamWidget(team: barber.team),
-      ]),
-    ]);
+    );
   }
 }

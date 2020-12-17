@@ -6,11 +6,19 @@ class _BarberServices extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
-      child: SizedBox(
-        width: 300,
-        child: RepaintBoundary(
-          child: ListView.builder(
+    return SizedBox(
+      width: 300,
+      child: RepaintBoundary(
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 25, bottom: 16),
+            child: Text(
+              'Услуги',
+              style: Styles.h2,
+            ),
+          ),
+          ListView.builder(
+            padding: const EdgeInsets.all(0),
             physics: NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             itemCount: services.length + 1,
@@ -19,7 +27,7 @@ class _BarberServices extends StatelessWidget {
               index: index,
             ),
           ),
-        ),
+        ]),
       ),
     );
   }
@@ -51,17 +59,16 @@ class _ServiceCardState extends State<_ServiceCard> {
   @override
   Widget build(BuildContext context) {
     Service _serviceCard;
-    //TODO sorry, that was not me =)
-    _serviceCard = widget.services[
-        widget.index > widget.services.length - 1
-            ? widget.services.length - 1
-            : widget.index];
+    //TODO looks bad
+    _serviceCard = widget.services[widget.index > widget.services.length - 1
+        ? widget.services.length - 1
+        : widget.index];
 
     return Container(
-      margin: const EdgeInsets.only(
-        left: 52,
-        right: 52,
-        bottom: 10.0,
+      margin: EdgeInsets.only(
+        left: 25,
+        right: 25,
+        bottom: widget.index == widget.services.length ? 28 : 10.0,
       ),
       decoration: BoxDecoration(
         color: MyColors.bgColor,
@@ -70,9 +77,9 @@ class _ServiceCardState extends State<_ServiceCard> {
         ),
       ),
       child: widget.index == widget.services.length
-          ? Center(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 18.0),
+          ? Padding(
+              padding: const EdgeInsets.only(top: 18.0, bottom: 18),
+              child: Center(
                 child: Text('ВСЕ УСЛУГИ', style: Styles.h3700),
               ),
             )

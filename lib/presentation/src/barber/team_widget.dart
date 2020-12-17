@@ -6,19 +6,30 @@ class _TeamWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
-      child: SizedBox(
-        height: 271,
-        width: double.infinity,
-        child: RepaintBoundary(
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: team.length,
-            itemBuilder: (context, index) => _TeamCard(
-              member: team[index],
-              i: index,
+      child: RepaintBoundary(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 52.0),
+            child: Text(
+              'Команда',
+              style: Styles.h2,
             ),
           ),
-        ),
+          SizedBox(
+            height: 271,
+            width: double.infinity,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: team.length,
+              itemBuilder: (context, index) => _TeamCard(
+                member: team[index],
+                i: index,
+              ),
+            ),
+          ),
+        ]),
       ),
     );
   }
@@ -33,13 +44,14 @@ class _TeamCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(right: 20.0, top: 26, bottom: 29.0, left: i == 0 ? 52 : 0),
+      margin: EdgeInsets.only(
+          right: 20.0, top: 26, bottom: 29.0, left: i == 0 ? 52 : 0),
       width: 133,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
-          //TODO check shadow
+          //TODO check shadows
           BoxShadow(
             blurRadius: 18,
             color: Colors.black.withOpacity(0.12),

@@ -10,9 +10,7 @@ class _OpenHours extends StatefulWidget {
   final bool isOpen;
   final TimeOfDay openTime;
   final TimeOfDay closeTime;
-  //TODO move to const
-  final TextStyle _style =
-      TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: Colors.white);
+
 
   @override
   _OpenHoursState createState() => _OpenHoursState();
@@ -29,53 +27,54 @@ class _OpenHoursState extends State<_OpenHours> {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
-      child: Padding(
-        padding: EdgeInsets.only(left: 54, right: 108),
-        child: GestureDetector(
-          onTap: () => setState(() => _isDropped = !_isDropped),
-          child: Container(
-            height: _isDropped ? 112 : 28,
-            decoration: BoxDecoration(
-              color: MyColors.mainColor,
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                //TODO change icon
+    return Padding(
+      padding: EdgeInsets.only(left: 31, right: 108),
+      child: GestureDetector(
+        onTap: () => setState(() => _isDropped = !_isDropped),
+        child: Container(
+          height: _isDropped ? 112 : 28,
+          decoration: BoxDecoration(
+            color: MyColors.mainColor,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                height: 12,
+                padding: const EdgeInsets.only(left: 10.0),
+                child: Image.asset('assets/images/icons/clock.png'),
+              ),
+              if (widget.isOpen)
                 Padding(
                   padding: const EdgeInsets.only(left: 10.0),
-                  child: Icon(Icons.alarm, size: 14, color: Colors.white),
-                ),
-                widget.isOpen
-                    ? Padding(
-                        padding: const EdgeInsets.only(left: 10.0),
-                        child: Text('Открыто', style: widget._style),
-                      )
-                    : Padding(
-                        padding: const EdgeInsets.only(left: 10.0),
-                        child: Text('Закрыто', style: widget._style),
-                      ),
-                if (widget.isOpen)
-                  Padding(
-                    padding: const EdgeInsets.only(left: 5.0),
-                    child: Text(
-                        '${widget.openTime.hour}:00 - ${widget.closeTime.hour}:00',
-                        style: widget._style),
-                  ),
-                Spacer(),
+                  child: Text('Открыто', style: Styles.h5700white),
+                )
+              else
                 Padding(
-                  padding: const EdgeInsets.only(right: 5.0),
-                  //TODO change icon
-                  child: Icon(
-                    _isDropped ? Icons.arrow_drop_up : Icons.arrow_drop_down,
-                    color: Colors.white,
-                  ),
+                  padding: const EdgeInsets.only(left: 10.0),
+                  child: Text('Закрыто', style: Styles.h5700white),
                 ),
-              ],
-            ),
+              if (widget.isOpen)
+                Padding(
+                  padding: const EdgeInsets.only(left: 5.0),
+                  child: Text(
+                      '${widget.openTime.hour}:00 - ${widget.closeTime.hour}:00',
+                      style: Styles.h5700white),
+                ),
+              Spacer(),
+              Container(
+                width: 10,
+                height: 10,
+                margin: const EdgeInsets.only(right: 10.0),
+                child: Image.asset(
+                  _isDropped
+                      ? 'assets/images/icons/chevron_up.png'
+                      : 'assets/images/icons/chevron_down.png',
+                ),
+              ),
+            ],
           ),
         ),
       ),
