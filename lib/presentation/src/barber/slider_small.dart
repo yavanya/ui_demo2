@@ -35,11 +35,10 @@ class _SliderSmallState extends State<_SliderSmall> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(25),
             child: Container(
-              width: double.infinity,
-              height: 146,
+
               child: Image.asset(
-                'assets/images/photos/${widget.service.images[_sliderIndex]}',
-                fit: BoxFit.fitHeight,
+                'assets/images/photos/${widget.service.images[_sliderIndex]}', fit: BoxFit.fill,
+                
               ),
             ),
           ),

@@ -6,29 +6,26 @@ class _BarberServices extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 300,
-      child: RepaintBoundary(
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 16),
-            child: Text(
-              'Услуги',
-              style: Styles.h2,
-            ),
+    return RepaintBoundary(
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Padding(
+          padding: const EdgeInsets.only(bottom: 16),
+          child: Text(
+            'Услуги',
+            style: Styles.h2,
           ),
-          ListView.builder(
-            padding: const EdgeInsets.all(0),
-            physics: NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            itemCount: services.length + 1,
-            itemBuilder: (context, index) => _ServiceCard(
-              services: services,
-              index: index,
-            ),
+        ),
+        ListView.builder(
+          padding: const EdgeInsets.all(0),
+          physics: NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          itemCount: services.length + 1,
+          itemBuilder: (context, index) => _ServiceCard(
+            services: services,
+            index: index,
           ),
-        ]),
-      ),
+        ),
+      ]),
     );
   }
 }
@@ -66,7 +63,6 @@ class _ServiceCardState extends State<_ServiceCard> {
 
     return Container(
       margin: EdgeInsets.only(
-        
         right: 25,
         bottom: widget.index == widget.services.length ? 28 : 10.0,
       ),
@@ -97,7 +93,10 @@ class _ServiceCardState extends State<_ServiceCard> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(left: 25.0),
+                          padding: const EdgeInsets.only(
+                            left: 25.0,
+                            right: 8.0,
+                          ),
                           child: Text(
                             _serviceCard.name,
                             style: Styles.h3700,
@@ -105,9 +104,14 @@ class _ServiceCardState extends State<_ServiceCard> {
                         ),
                         if (!_isDropped)
                           GestureDetector(
-                            child: const Icon(
-                              Icons.arrow_drop_down,
-                              color: MyColors.mainColor,
+                            child: SizedBox(
+                              width: 10,
+                              height: 10,
+                              child: Center(
+                                child: Image.asset(
+                                  'assets/images/icons/chevron_down.png',
+                                ),
+                              ),
                             ),
                             onTap: () =>
                                 setState(() => _isDropped = !_isDropped),

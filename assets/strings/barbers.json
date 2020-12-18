@@ -2,11 +2,11 @@
     {
         "name": "Саня Рыжий",
         "address": "Ожешко 39/1",
-        "mainImage": "/sanya.png",
+        "mainImage": "/sanya.webp",
         "images": [
-            "slider/slide1.png",
-            "slider/slide2.png",
-            "slider/slide3.png"
+            "slider/slide1.webp",
+            "slider/slide1.webp",
+            "slider/slide1.webp"
         ],
         "rating": 4.8,
         "isIndividual": true,
@@ -18,9 +18,9 @@
             {
                 "name": "Мужская стрижка",
                 "images": [
-                    "services/service1.png",
-                    "services/service2.png",
-                    "services/service3.png"
+                    "services/service1.webp",
+                    "services/service1.webp",
+                    "services/service1.webp"
                 ],
                 "description": "Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка",
                 "durationMin": "2ч",
@@ -30,9 +30,9 @@
             {
                 "name": "Женская стрижка",
                 "images": [
-                    "services/service1.png",
-                    "services/service2.png",
-                    "services/service3.png"
+                    "services/service1.webp",
+                    "services/service1.webp",
+                    "services/service1.webp"
                 ],
                 "description": "Описание услуги Женская стрижка Описание услуги Женская стрижка Описание услуги Женская стрижка Описание услуги Женская стрижка",
                 "durationMin": "2ч",
@@ -42,9 +42,9 @@
             {
                 "name": "Мужская стрижка",
                 "images": [
-                    "services/service1.png",
-                    "services/service2.png",
-                    "services/service3.png"
+                    "services/service1.webp",
+                    "services/service1.webp",
+                    "services/service1.webp"
                 ],
                 "description": "Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка",
                 "durationMin": "2ч",
@@ -79,11 +79,11 @@
     {
         "name": "Салон",
         "address": "Малая Арнаутская 52",
-        "mainImage": "/salon.png",
+        "mainImage": "/salon.webp",
         "images": [
-            "slider/slide1.png",
-            "slider/slide2.png",
-            "slider/slide3.png"
+            "slider/slide1.webp",
+            "slider/slide1.webp",
+            "slider/slide1.webp"
         ],
         "rating": 3.9,
         "isIndividual": false,
@@ -94,28 +94,28 @@
         "team": [
             {
                 "name": "Саня Рыжий",
-                "image": "team/team.png"
+                "image": "team/team.webp"
             },
             {
                 "name": "Саня Рыжий",
-                "image": "team/team.png"
+                "image": "team/team.webp"
             },
             {
                 "name": "Саня Рыжий",
-                "image": "team/team.png"
+                "image": "team/team.webp"
             },
             {
                 "name": "Саня Рыжий",
-                "image": "team/team.png"
+                "image": "team/team.webp"
             }
         ],
         "services": [
             {
                 "name": "Мужская стрижка",
                 "images": [
-                    "services/service1.png",
-                    "services/service2.png",
-                    "services/service3.png"
+                    "services/service1.webp",
+                    "services/service1.webp",
+                    "services/service1.webp"
                 ],
                 "description": "Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка",
                 "durationMin": "2ч",
@@ -125,9 +125,9 @@
             {
                 "name": "Женская стрижка",
                 "images": [
-                    "services/service1.png",
-                    "services/service2.png",
-                    "services/service3.png"
+                    "services/service1.webp",
+                    "services/service1.webp",
+                    "services/service1.webp"
                 ],
                 "description": "Описание услуги Женская стрижка Описание услуги Женская стрижка Описание услуги Женская стрижка Описание услуги Женская стрижка",
                 "durationMin": "2ч",
@@ -137,9 +137,9 @@
             {
                 "name": "Мужская стрижка",
                 "images": [
-                    "services/service1.png",
-                    "services/service2.png",
-                    "services/service3.png"
+                    "services/service1.webp",
+                    "services/service1.webp",
+                    "services/service1.webp"
                 ],
                 "description": "Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка",
                 "durationMin": "2ч",
@@ -174,11 +174,11 @@
     {
         "name": "Winchester",
         "address": "Малая Арнаутская 54",
-        "mainImage": "/winchester.png",
+        "mainImage": "/winchester.webp",
         "images": [
-            "slider/slide1.png",
-            "slider/slide2.png",
-            "slider/slide3.png"
+            "slider/slide1.webp",
+            "slider/slide1.webp",
+            "slider/slide1.webp"
         ],
         "rating": 4.1,
         "isIndividual": false,
@@ -189,28 +189,28 @@
         "team": [
             {
                 "name": "Саня Рыжий",
-                "image": "team/team.png"
+                "image": "team/team.webp"
             },
             {
                 "name": "Саня Рыжий",
-                "image": "team/team.png"
+                "image": "team/team.webp"
             },
             {
                 "name": "Саня Рыжий",
-                "image": "team/team.png"
+                "image": "team/team.webp"
             },
             {
                 "name": "Саня Рыжий",
-                "image": "team/team.png"
+                "image": "team/team.webp"
             }
         ],
         "services": [
             {
                 "name": "Мужская стрижка",
                 "images": [
-                    "services/service1.png",
-                    "services/service2.png",
-                    "services/service3.png"
+                    "services/service1.webp",
+                    "services/service1.webp",
+                    "services/service1.webp"
                 ],
                 "description": "Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка",
                 "durationMin": "2ч",
@@ -220,9 +220,9 @@
             {
                 "name": "Женская стрижка",
                 "images": [
-                    "services/service1.png",
-                    "services/service2.png",
-                    "services/service3.png"
+                    "services/service1.webp",
+                    "services/service1.webp",
+                    "services/service1.webp"
                 ],
                 "description": "Описание услуги Женская стрижка Описание услуги Женская стрижка Описание услуги Женская стрижка Описание услуги Женская стрижка",
                 "durationMin": "2ч",
@@ -232,9 +232,9 @@
             {
                 "name": "Мужская стрижка",
                 "images": [
-                    "services/service1.png",
-                    "services/service2.png",
-                    "services/service3.png"
+                    "services/service1.webp",
+                    "services/service1.webp",
+                    "services/service1.webp"
                 ],
                 "description": "Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка",
                 "durationMin": "2ч",
@@ -269,11 +269,11 @@
     {
         "name": "Серега",
         "address": "Ожешко 39/1",
-        "mainImage": "/serega.png",
+        "mainImage": "/serega.webp",
         "images": [
-            "slider/slide1.png",
-            "slider/slide2.png",
-            "slider/slide3.png"
+            "slider/slide1.webp",
+            "slider/slide1.webp",
+            "slider/slide1.webp"
         ],
         "rating": 2.4,
         "isIndividual": true,
@@ -285,9 +285,9 @@
             {
                 "name": "Мужская стрижка",
                 "images": [
-                    "services/service1.png",
-                    "services/service2.png",
-                    "services/service3.png"
+                    "services/service1.webp",
+                    "services/service1.webp",
+                    "services/service1.webp"
                 ],
                 "description": "Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка",
                 "durationMin": "2ч",
@@ -297,9 +297,9 @@
             {
                 "name": "Женская стрижка",
                 "images": [
-                    "services/service1.png",
-                    "services/service2.png",
-                    "services/service3.png"
+                    "services/service1.webp",
+                    "services/service1.webp",
+                    "services/service1.webp"
                 ],
                 "description": "Описание услуги Женская стрижка Описание услуги Женская стрижка Описание услуги Женская стрижка Описание услуги Женская стрижка",
                 "durationMin": "2ч",
@@ -309,9 +309,9 @@
             {
                 "name": "Мужская стрижка",
                 "images": [
-                    "services/service1.png",
-                    "services/service2.png",
-                    "services/service3.png"
+                    "services/service1.webp",
+                    "services/service1.webp",
+                    "services/service1.webp"
                 ],
                 "description": "Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка",
                 "durationMin": "2ч",
@@ -346,11 +346,11 @@
     {
         "name": "Barbershop",
         "address": "Летчиков 31",
-        "mainImage": "/cheremushki.png",
+        "mainImage": "/cheremushki.webp",
         "images": [
-            "slider/slide1.png",
-            "slider/slide2.png",
-            "slider/slide3.png"
+            "slider/slide1.webp",
+            "slider/slide1.webp",
+            "slider/slide1.webp"
         ],
         "rating": 1.9,
         "isIndividual": false,
@@ -361,28 +361,28 @@
         "team": [
             {
                 "name": "Саня Рыжий",
-                "image": "team/team.png"
+                "image": "team/team.webp"
             },
             {
                 "name": "Саня Рыжий",
-                "image": "team/team.png"
+                "image": "team/team.webp"
             },
             {
                 "name": "Саня Рыжий",
-                "image": "team/team.png"
+                "image": "team/team.webp"
             },
             {
                 "name": "Саня Рыжий",
-                "image": "team/team.png"
+                "image": "team/team.webp"
             }
         ],
         "services": [
             {
                 "name": "Мужская стрижка",
                 "images": [
-                    "services/service1.png",
-                    "services/service2.png",
-                    "services/service3.png"
+                    "services/service1.webp",
+                    "services/service1.webp",
+                    "services/service1.webp"
                 ],
                 "description": "Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка",
                 "durationMin": "2ч",
@@ -392,9 +392,9 @@
             {
                 "name": "Женская стрижка",
                 "images": [
-                    "services/service1.png",
-                    "services/service2.png",
-                    "services/service3.png"
+                    "services/service1.webp",
+                    "services/service1.webp",
+                    "services/service1.webp"
                 ],
                 "description": "Описание услуги Женская стрижка Описание услуги Женская стрижка Описание услуги Женская стрижка Описание услуги Женская стрижка",
                 "durationMin": "2ч",
@@ -404,9 +404,9 @@
             {
                 "name": "Мужская стрижка",
                 "images": [
-                    "services/service1.png",
-                    "services/service2.png",
-                    "services/service3.png"
+                    "services/service1.webp",
+                    "services/service1.webp",
+                    "services/service1.webp"
                 ],
                 "description": "Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка Описание услуги Мужская стрижка",
                 "durationMin": "2ч",

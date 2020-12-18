@@ -7,11 +7,11 @@ class _TeamWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: RepaintBoundary(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Padding(
-            padding: const EdgeInsets.only(left: 52.0),
+            padding: const EdgeInsets.only(
+              left: 52.0,
+            ),
             child: Text(
               'Команда',
               style: Styles.h2,
@@ -45,7 +45,11 @@ class _TeamCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(
-          right: 20.0, top: 26, bottom: 29.0, left: i == 0 ? 52 : 0),
+        right: 20.0,
+        top: 26,
+        bottom: 29.0,
+        left: i == 0 ? 52 : 0,
+      ),
       width: 133,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -70,7 +74,10 @@ class _TeamCard extends StatelessWidget {
           ),
           Expanded(
             child: Center(
-              child: Text(member.name, style: Styles.h4500),
+              child: Text(
+                member.name,
+                style: Styles.h4500,
+              ),
             ),
           ),
           Container(
@@ -79,15 +86,18 @@ class _TeamCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(24),
                 color: MyColors.mainColor),
             child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10.0),
+              padding: const EdgeInsets.symmetric(
+                vertical: 10.0,
+              ),
               child: Text(
                 'ЗАПИСАТЬСЯ',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: 0.24),
+                  color: Colors.white,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 0.24,
+                ),
               ),
             ),
           )

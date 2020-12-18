@@ -51,15 +51,22 @@ class _ReviewWidget extends StatelessWidget {
 }
 
 class _ReviewCard extends StatelessWidget {
-  _ReviewCard({@required this.reviews, @required this.i, Key key})
-      : super(key: key);
+  _ReviewCard({
+    @required this.reviews,
+    @required this.i,
+    Key key,
+  }) : super(key: key);
   final List<Review> reviews;
   final int i;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 24.0, right: 24, bottom: 10),
+      margin: EdgeInsets.only(
+        left: 24.0,
+        right: 24,
+        bottom: 10,
+      ),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -67,36 +74,55 @@ class _ReviewCard extends StatelessWidget {
       child: i > reviews.length - 1
           ? Center(
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 18.0),
-                child: Text('ВСЕ ОТЗЫВЫ', style: Styles.h3700),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 18.0,
+                ),
+                child: Text(
+                  'ВСЕ ОТЗЫВЫ',
+                  style: Styles.h3700,
+                ),
               ),
             )
           : Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 21.0, bottom: 10),
+                  padding: const EdgeInsets.only(
+                    top: 21.0,
+                    bottom: 10,
+                  ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 20.0),
+                        padding: const EdgeInsets.only(
+                          left: 20.0,
+                        ),
                         child: CircleAvatar(
                           radius: 22.5,
                           backgroundImage: AssetImage(
-                              'assets/images/photos${reviews[i].avatarImage}.png'),
+                            'assets/images/photos${reviews[i].avatarImage}.webp',
+                          ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 14.0),
-                        child: Text(reviews[i].name, style: Styles.h3700),
+                        padding: const EdgeInsets.only(
+                          left: 14.0,
+                        ),
+                        child: Text(
+                          reviews[i].name,
+                          style: Styles.h3700,
+                        ),
                       ),
                     ],
                   ),
                 ),
                 Padding(
-                  padding:
-                      const EdgeInsets.only(left: 20.0, right: 20, bottom: 23),
+                  padding: const EdgeInsets.only(
+                    left: 20.0,
+                    right: 20,
+                    bottom: 23,
+                  ),
                   child: Text(
                     reviews[i].review,
                     textAlign: TextAlign.start,
@@ -104,8 +130,11 @@ class _ReviewCard extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding:
-                      const EdgeInsets.only(left: 20, right: 20, bottom: 21),
+                  padding: const EdgeInsets.only(
+                    left: 20,
+                    right: 20,
+                    bottom: 21,
+                  ),
                   child: Row(
                     children: [
                       Text(
@@ -119,14 +148,18 @@ class _ReviewCard extends StatelessWidget {
                         height: 18,
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 8),
+                        padding: const EdgeInsets.only(
+                          left: 8,
+                        ),
                         child: Text(
                           reviews[i].rating.toStringAsPrecision(2),
                           style: Styles.h4500,
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 8),
+                        padding: const EdgeInsets.only(
+                          left: 8,
+                        ),
                         child: Text(
                           getRatingString(reviews[i].rating),
                           style: Styles.h4500,

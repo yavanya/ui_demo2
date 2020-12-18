@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
     SystemChrome.setEnabledSystemUIOverlays([]);
     return GetMaterialApp(
         theme: ThemeData(
-          primaryColor: Color(0xffFF8585),
-          accentColor: Color(0xffFF8585),
+          primaryColor: Color(0xffF2F2F2),
+          accentColor: Color(0xffF2F2F2),
         ),
         home: HomeView());
   }
