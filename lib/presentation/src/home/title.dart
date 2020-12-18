@@ -17,6 +17,7 @@ class _Title extends StatelessWidget {
               title,
               textAlign: TextAlign.left,
               style: const TextStyle(
+                fontFamily: 'Gilroy',
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
                 letterSpacing: 0.4,

@@ -1,6 +1,5 @@
-
-import 'package:barbers_demo/constant/colors.dart';
 import 'package:flutter/material.dart';
+import '../../../constant/colors.dart';
 
 class SearchBar extends StatelessWidget {
   const SearchBar({
@@ -40,6 +39,7 @@ class SearchBar extends StatelessWidget {
                   child: Text(
                     'Найти',
                     style: TextStyle(
+                      fontFamily: 'Gilroy',
                       fontWeight: FontWeight.w600,
                       fontSize: 14,
                       letterSpacing: 0.02,

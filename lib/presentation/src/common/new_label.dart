@@ -1,5 +1,5 @@
-import 'package:barbers_demo/constant/colors.dart';
 import 'package:flutter/material.dart';
+import '../../../constant/colors.dart';
 
 class NewLabel extends StatelessWidget {
   const NewLabel({
@@ -21,6 +21,7 @@ class NewLabel extends StatelessWidget {
           child: const Text(
             'Новинка',
             style: TextStyle(
+                fontFamily: 'Gilroy',
                 color: Colors.white,
                 fontWeight: FontWeight.w500,
                 fontSize: 9,

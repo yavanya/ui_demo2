@@ -64,7 +64,7 @@ class _TeamCard extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(24),
             child: Image.asset(
-              'assets/images/photos${member.image}',
+              'assets/images/photos/${member.image}',
               fit: BoxFit.contain,
             ),
           ),

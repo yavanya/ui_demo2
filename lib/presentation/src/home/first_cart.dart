@@ -25,7 +25,7 @@ class _FirstCard extends StatelessWidget {
                 ),
               ],
               image: DecorationImage(
-                image: AssetImage('assets/images/photos${barber.images[0]}'),
+                image: AssetImage('assets/images/photos${barber.mainImage}'),
                 fit: BoxFit.fitWidth,
                 alignment: Alignment.topCenter,
               ),
@@ -42,6 +42,7 @@ class _FirstCard extends StatelessWidget {
                     Text(
                       barber.name,
                       style: const TextStyle(
+                        fontFamily: 'Gilroy',
                         color: MyColors.mainColor,
                         fontWeight: FontWeight.w700,
                         fontSize: 18,
@@ -51,6 +52,7 @@ class _FirstCard extends StatelessWidget {
                     Text(
                       barber.address,
                       style: const TextStyle(
+                        fontFamily: 'Gilroy',
                         color: MyColors.mainColor,
                         fontWeight: FontWeight.w500,
                         fontSize: 12,
@@ -72,6 +74,7 @@ class _FirstCard extends StatelessWidget {
                             child: Text(
                               barber.rating.toStringAsPrecision(2),
                               style: const TextStyle(
+                                fontFamily: 'Gilroy',
                                 color: MyColors.mainColor,
                                 fontWeight: FontWeight.w700,
                                 fontSize: 12,
@@ -84,6 +87,7 @@ class _FirstCard extends StatelessWidget {
                             child: Text(
                               barber.ratingString,
                               style: const TextStyle(
+                                fontFamily: 'Gilroy',
                                 color: MyColors.mainColor,
                                 fontWeight: FontWeight.w500,
                                 fontSize: 12,

@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
-import 'package:barbers_demo/presentation/screens/home/home_screen.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import './presentation/screens/home/home_screen.dart';
 
 void main() {
   runApp(MyApp());

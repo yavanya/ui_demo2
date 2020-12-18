@@ -1,8 +1,8 @@
 
-import 'package:barbers_demo/constant/colors.dart';
-import 'package:barbers_demo/constant/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../constant/text_styles.dart';
+import '../../../constant/colors.dart';
 
 class CustomAppBar extends StatefulWidget with PreferredSizeWidget {
   @override
@@ -34,25 +34,28 @@ class _CustomAppBarState extends State<CustomAppBar> {
         style: Styles.h2,
       ),
       backgroundColor: Colors.white,
-      leading: IconButton(
-        icon: Icon(
-          Icons.chevron_left_rounded,
-          color: MyColors.mainColor,
-          size: 38,
+      leading: Padding(
+        padding: const EdgeInsets.only(left: 20.0),
+        child: GestureDetector(
+          child: Icon(
+            Icons.chevron_left_rounded,
+            color: MyColors.mainColor,
+            size: 38,
+          ),
+          onTap: () => Get.back(canPop: true),
         ),
-        onPressed: () => Get.back(canPop: true),
       ),
       elevation: 5.0,
       actions: [
         Padding(
-          padding: const EdgeInsets.only(right: 8.0),
-          child: IconButton(
-            icon: Icon(
+          padding: const EdgeInsets.only(right: 35.0),
+          child: GestureDetector(
+            child: Icon(
               _isFavorite ? Icons.favorite : Icons.favorite_border,
               color: MyColors.mainColor,
               size: 28,
             ),
-            onPressed: () => setState(() => _isFavorite = !_isFavorite),
+            onTap: () => setState(() => _isFavorite = !_isFavorite),
           ),
         ),
       ],

@@ -11,7 +11,7 @@ class _BarberServices extends StatelessWidget {
       child: RepaintBoundary(
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Padding(
-            padding: const EdgeInsets.only(left: 25, bottom: 16),
+            padding: const EdgeInsets.only(bottom: 16),
             child: Text(
               'Услуги',
               style: Styles.h2,
@@ -66,7 +66,7 @@ class _ServiceCardState extends State<_ServiceCard> {
 
     return Container(
       margin: EdgeInsets.only(
-        left: 25,
+        
         right: 25,
         bottom: widget.index == widget.services.length ? 28 : 10.0,
       ),
@@ -78,7 +78,7 @@ class _ServiceCardState extends State<_ServiceCard> {
       ),
       child: widget.index == widget.services.length
           ? Padding(
-              padding: const EdgeInsets.only(top: 18.0, bottom: 18),
+              padding: const EdgeInsets.only(top: 18.0, bottom: 18.0),
               child: Center(
                 child: Text('ВСЕ УСЛУГИ', style: Styles.h3700),
               ),

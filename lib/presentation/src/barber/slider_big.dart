@@ -35,12 +35,13 @@ class _SliderWidgetState extends State<_SliderWidget> {
             },
             child: Container(
               width: double.infinity,
-              height: 222,
+              height: 202,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(24),
                 image: DecorationImage(
                   image: AssetImage(
-                      'assets/images/photos${widget.barber.images[_sliderIndex]}'), fit: BoxFit.fitWidth
+                      'assets/images/photos/${widget.barber.images[_sliderIndex]}'),
+                  fit: BoxFit.fitHeight,
                 ),
               ),
               margin: const EdgeInsets.only(left: 24, right: 24),

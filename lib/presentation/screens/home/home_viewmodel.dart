@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:barbers_demo/domain/model/barber.dart';
 import 'package:flutter/services.dart';
 import 'package:stacked/stacked.dart';
+import '../../../domain/model/barber.dart';
 
 class HomeViewModel extends FutureViewModel {
   List<Barber> _individuals = [];

@@ -37,6 +37,7 @@ class _VerticalWidget extends StatelessWidget {
                 title,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
+                  fontFamily: 'Gilroy',
                   color: MyColors.mainColor,
                   fontWeight: FontWeight.w600,
                   fontSize: 16,
@@ -46,6 +47,7 @@ class _VerticalWidget extends StatelessWidget {
               Text(
                 'посмотреть все',
                 style: const TextStyle(
+                  fontFamily: 'Gilroy',
                   color: MyColors.mainColor,
                   fontWeight: FontWeight.w600,
                   fontSize: 10,

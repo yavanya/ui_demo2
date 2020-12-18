@@ -21,17 +21,22 @@ class _InfoWidget extends StatelessWidget {
             ),
           ],
         ),
-        child: Column(children: [
-          Gap(21),
-          SmallInfoWidget(barber: barber),
-          Gap(20),
-          _OpenHours(
-              isOpen: barber.isOpen,
-              openTime: barber.openTimeReal,
-              closeTime: barber.closeTimeReal),
-          Gap(20),
-          _BarberServices(services: barber.services),
-        ]),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 25.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+            Gap(21),
+            SmallInfoWidget(barber: barber),
+            Gap(20),
+            _OpenHours(
+                isOpen: barber.isOpen,
+                openTime: barber.openTimeReal,
+                closeTime: barber.closeTimeReal),
+            Gap(20),
+            _BarberServices(services: barber.services),
+          ]),
+        ),
       ),
     );
   }

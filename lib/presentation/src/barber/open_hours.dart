@@ -11,7 +11,6 @@ class _OpenHours extends StatefulWidget {
   final TimeOfDay openTime;
   final TimeOfDay closeTime;
 
-
   @override
   _OpenHoursState createState() => _OpenHoursState();
 }
@@ -27,57 +26,54 @@ class _OpenHoursState extends State<_OpenHours> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: 31, right: 108),
-      child: GestureDetector(
-        onTap: () => setState(() => _isDropped = !_isDropped),
-        child: Container(
+    return GestureDetector(
+      onTap: () => setState(() => _isDropped = !_isDropped),
+      child: Container(
+          width: 192,
           height: _isDropped ? 112 : 28,
           decoration: BoxDecoration(
             color: MyColors.mainColor,
             borderRadius: BorderRadius.circular(20),
           ),
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Container(
-                height: 12,
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Image.asset('assets/images/icons/clock.png'),
-              ),
-              if (widget.isOpen)
-                Padding(
-                  padding: const EdgeInsets.only(left: 10.0),
-                  child: Text('Открыто', style: Styles.h5700white),
-                )
-              else
-                Padding(
-                  padding: const EdgeInsets.only(left: 10.0),
-                  child: Text('Закрыто', style: Styles.h5700white),
-                ),
-              if (widget.isOpen)
-                Padding(
-                  padding: const EdgeInsets.only(left: 5.0),
-                  child: Text(
-                      '${widget.openTime.hour}:00 - ${widget.closeTime.hour}:00',
-                      style: Styles.h5700white),
-                ),
-              Spacer(),
-              Container(
-                width: 10,
-                height: 10,
-                margin: const EdgeInsets.only(right: 10.0),
-                child: Image.asset(
-                  _isDropped
-                      ? 'assets/images/icons/chevron_up.png'
-                      : 'assets/images/icons/chevron_down.png',
-                ),
-              ),
+      Container(
+        height: 12,
+        padding: const EdgeInsets.only(left: 10.0),
+        child: Image.asset('assets/images/icons/clock.png'),
+      ),
+      if (widget.isOpen)
+        Padding(
+          padding: const EdgeInsets.only(left: 10.0),
+          child: Text('Открыто', style: Styles.h5700white),
+        )
+      else
+        Padding(
+          padding: const EdgeInsets.only(left: 10.0),
+          child: Text('Закрыто', style: Styles.h5700white),
+        ),
+      if (widget.isOpen)
+        Padding(
+          padding: const EdgeInsets.only(left: 5.0),
+          child: Text(
+              '${widget.openTime.hour}:00 - ${widget.closeTime.hour}:00',
+              style: Styles.h5700white),
+        ),
+      Spacer(),
+      Container(
+        width: 10,
+        height: 10,
+        margin: const EdgeInsets.only(right: 10.0),
+        child: Image.asset(
+          _isDropped
+              ? 'assets/images/icons/chevron_up.png'
+              : 'assets/images/icons/chevron_down.png',
+        ),
+      ),
             ],
           ),
         ),
-      ),
     );
   }
 }

@@ -6,6 +6,7 @@ class Barber {
   Barber({
     @required this.name,
     @required this.address,
+    @required this.mainImage,
     @required this.images,
     @required this.rating,
     @required this.isIndividual,
@@ -28,7 +29,7 @@ class Barber {
     }
   }
 
-  String name, address, openTime, closeTime, ratingString;
+  String name, address, mainImage, openTime, closeTime, ratingString;
   TimeOfDay openTimeReal;
   TimeOfDay closeTimeReal;
   List<String> images;
@@ -42,6 +43,7 @@ class Barber {
     return Barber(
       name: json["name"],
       address: json["address"],
+      mainImage: json["mainImage"],
       images: List<String>.from(json["images"].map((x) => x)),
       rating: json["rating"].toDouble(),
       isIndividual: json["isIndividual"],
