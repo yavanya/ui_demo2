@@ -11,10 +11,27 @@ class _SliderSmall extends StatefulWidget {
 class _SliderSmallState extends State<_SliderSmall> {
   int _sliderIndex;
 
+  List<Image> _images = [];
+
   @override
   void initState() {
-    _sliderIndex = 0;
     super.initState();
+    _sliderIndex = 0;
+    widget.service.images.forEach((e) {
+      _images.add(
+        Image.asset(
+          'assets/images/photos/$e',
+        ),
+      );
+    });
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _images.forEach((e) {
+      precacheImage(e.image, context);
+    });
   }
 
   @override
@@ -25,7 +42,7 @@ class _SliderSmallState extends State<_SliderSmall> {
         GestureDetector(
           onTap: () {
             setState(() {
-              if (_sliderIndex < widget.service.images.length - 1) {
+              if (_sliderIndex < _images.length - 1) {
                 _sliderIndex++;
               } else {
                 _sliderIndex = 0;
@@ -35,18 +52,15 @@ class _SliderSmallState extends State<_SliderSmall> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(25),
             child: Container(
-
-              child: Image.asset(
-                'assets/images/photos/${widget.service.images[_sliderIndex]}', fit: BoxFit.fill,
-                
+              child: _images[_sliderIndex],
               ),
             ),
           ),
-        ),
+        
         Positioned(
           bottom: 10,
           child: Row(
-            children: List.generate(widget.service.images.length, (i) {
+            children: List.generate(_images.length, (i) {
               int _curIndex;
               _curIndex = i;
               return Container(

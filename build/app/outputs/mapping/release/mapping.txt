@@ -1,7 +1,7 @@
 # compiler: R8
 # compiler_version: 1.5.64
 # min_api: 16
-# pg_map_id: e73c0d6
+# pg_map_id: 1e47893
 androidx.activity.Cancellable -> androidx.activity.a:
 androidx.activity.ComponentActivity -> androidx.activity.b:
     androidx.lifecycle.ViewModelStore getViewModelStore() -> a
@@ -381,6 +381,7 @@ io.flutter.Log -> b.a.b:
     void d(java.lang.String,java.lang.String) -> a
     void e(java.lang.String,java.lang.String,java.lang.Throwable) -> a
     void e(java.lang.String,java.lang.String) -> b
+    void w(java.lang.String,java.lang.String,java.lang.Throwable) -> b
     void v(java.lang.String,java.lang.String) -> c
     void w(java.lang.String,java.lang.String) -> d
 io.flutter.embedding.android.AndroidKeyProcessor -> io.flutter.embedding.android.a:
